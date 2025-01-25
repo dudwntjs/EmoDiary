@@ -76,6 +76,7 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
     - 각 일기 항목은 날짜와 감정 이모지, 간단한 텍스트가 포함되어 있으며, **‘공감’ 버튼**을 통해 공감 메시지를 받을 수 있습니다.
     - 저장된 일기에서 **‘공감’ 버튼**을 클릭하면, 챗지피티가 자동으로 **공감 메시지**를 생성하여 사용자에게 전달합니다.
     - 공감 메시지 생성은 OpenAI GPT API와의 연동을 통해 이루어집니다.
+      (GitHub에서 해당 프로젝트를 클론한 경우, API 키가 포함되지 않기 때문에 공감 메시지가 정상적으로 생성되지 않을 수 있습니다.)
 
 <div align="center">
     <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Emoji%20Statistics.png?raw=true" alt="Emoji Statistics" width="50%" />
