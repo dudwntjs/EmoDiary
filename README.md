@@ -1,5 +1,4 @@
-# EmoDiary
-
+# EmoDiary📗
 "Emotion"과 "Diary"의 결합으로, 감정을 기록하는 일기라는 의미를 담고 있습니다.
 
 EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신의 감정을 기록하고, 챗지피티가 자동으로 공감 메시지를 생성하는 기능을 제공하는 웹 애플리케이션입니다. 사용자는 일기를 작성하면서 감정을 기록하고, 챗지피티는 그 감정에 대한 공감을 전달합니다. 또한, 사용자는 월별 통계를 통해 자신이 가장 많이 느낀 감정을 확인할 수 있습니다.
@@ -28,43 +27,17 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
     Apple Health는 **감정 추적 기능**을 통해 사용자가 매일 자신의 감정을 기록하고, 그 감정에 대한 변화를 시각적으로 분석할 수 있도록 돕고 있습니다. 이는 건강 관리와 감정 인식을 함께 지원하여 사용자의 **정신 건강**을 향상시키는 데 큰 도움이 됩니다.
     
     <div style="display: flex; gap: 10px; align-items: center;">
-    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health1.png?raw=true" alt="Apple Health 1" width="45%" />
-    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health2.png?raw=true" alt="Apple Health 2" width="45%" />
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health1.png?raw=true" alt="Apple Health 1" width="30%" />
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health2.png?raw=true" alt="Apple Health 2" width="30%" />
 </div>
 
 2. **U+ 감정 일기**
     
     **U+ 감정 일기**는 사용자가 하루 동안의 감정을 이모지로 표현하고, 그 감정에 대해 **피드백과 공감**을 제공합니다. 이를 통해 사용자는 감정에 대해 인식하고, 공감을 얻는 과정을 경험하면서 **정서적 안정을 추구**할 수 있습니다.
-    
-    ![U+ 감정 일기](https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/U+%20%EA%B0%90%EC%A0%95%20%EC%9D%BC%EA%B8%B0.png?raw=true)
 
----
-
-## 와이어프레임
-
-### 주요 구성 요소
-
-1. **헤더 (Header)**
-   - 화면 상단에 애플리케이션 이름과 메뉴탭(데일리/먼슬리)이 위치.
-   - ActiveBar를 사용하여 현재 활성화된 탭을 시각적으로 구분.
-
-2. **날짜 입력**
-   - 날짜를 달력 형태로 제공하여 사용자가 쉽게 선택할 수 있도록 구성.
-
-3. **감정 선택**
-   - 다양한 이모지를 통해 감정을 선택 가능.
-
-4. **일기 작성**
-   - 간단한 텍스트 박스에 사용자가 자신의 감정을 작성할 수 있음.
-
-5. **저장하기**
-   - 입력한 내용을 저장하고, 저장된 일기는 목록에 추가됨.
-
-6. **저장된 일기 목록**
-   - 저장된 일기 항목에는 날짜, 감정 이모지, 간단한 텍스트가 포함.
-
-7. **공감**
-   - 공감 버튼 클릭 시, 챗지피티 API를 통해 공감 메시지를 생성.
+    <div style="display: flex; gap: 10px; align-items: center;">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/U+%20%EA%B0%90%EC%A0%95%20%EC%9D%BC%EA%B8%B0.png?raw=true" alt="U+ 감정 일기" width="45%" />
+</div>
 
 ---
 
@@ -98,9 +71,11 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
 
 ## 기술 스택
 
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap
-- **API Integration**: OpenAI GPT API
-- **Storage**: Web Storage(JSON 파일 관리)
+| **기술 스택** | **설명**                         |
+|----------------|---------------------------------|
+| **Frontend**   | HTML, CSS, JavaScript, Bootstrap |
+| **API Integration** | OpenAI GPT API                 |
+| **Storage**    | Web Storage(JSON 파일 관리)     |
 
 ---
 
@@ -114,19 +89,6 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
 
 2. 로컬 서버 실행
    - 브라우저에서 `mainpage.html` 파일 열기
-
----
-
-## 스크린샷
-
-### 감정 선택 및 일기 작성 화면
-![감정 선택 및 일기 작성](https://prod-files-secure.s3.us-west-2.amazonaws.com/5ab8978b-a426-440a-b593-4c5671bcb8d2/73246456-5484-42eb-b585-cd640bbce419/image.png)
-
-### 달력 및 감정 통계 화면
-![달력 및 감정 통계](https://prod-files-secure.s3.us-west-2.amazonaws.com/5ab8978b-a426-440a-b593-4c5671bcb8d2/ac6cfc4b-1e4d-4ffc-bcad-0092367ccf0f/1a09ddfc-4e8f-42cd-81a6-b99e2c704855.png)
-
-### 행운 카드
-![행운 카드](https://prod-files-secure.s3.us-west-2.amazonaws.com/5ab8978b-a426-440a-b593-4c5671bcb8d2/e9dfdf11-7d9a-44c9-9b74-60ad4f227ba7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-12-16_23.37.20.png)
 
 ---
 
