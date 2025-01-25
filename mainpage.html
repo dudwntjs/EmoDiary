@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>📝 일기장</title>
+    <!-- CSS 파일 불러오기 -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap-datepicker CSS 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+</head>
+<body>
+    <!-- 상단바 -->
+    <header class="navbar-container">
+        <div class="navbar-logo">
+            <img src="./assests/logo.png" alt="Logo">
+        </div>
+        <nav class="navbar-menu">
+            <button class="menu-button" data-tab="daily-tab">데일리</button>
+            <button class="menu-button" data-tab="calendar-tab">먼슬리</button>
+            <div class="active-bar"></div>
+        </nav>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="container">
+        <!-- 일기 저장 탭 -->
+        <div id="daily-tab" class="tab-content">
+            <h1>나의 감정을 공감해주는 일기장</h1>
+            
+            <div class="row g-2 mb-3">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <label for="date">오늘 날짜를 입력해주세요</label>
+                        <input type="date" id="date" class="form-control" placeholder="연도. 월. 일.">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <label for="mood">오늘 기분은 어땠나요?</label>
+                    <div id="emoji" data-selected-emoji=""></div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" id="text" class="form-control" placeholder="오늘 한 일, 간단한 소감을 적어주세요">
+                </div>
+            </div>
+            
+            <button type="button" id="save" class="btn btn-primary mb-3">저장하기</button>
+            
+            <div class="list-group" id="result"></div>
+            <script>
+                function renderDiaryEntries(entries) {
+                    const resultContainer = document.getElementById('result');
+                    resultContainer.innerHTML = '';
+            
+                    entries.forEach((entry, index) => {
+                        const listItem = document.createElement('div');
+                        listItem.classList.add('list-group-item');
+                        listItem.innerHTML = `
+                            <strong>${entry.text}</strong><br>
+                            ${entry.date} <span style="font-size: 20px;">${entry.mood}</span>
+                            <button class="delete-entry" onclick="deleteDiaryEntry(${index})">삭제</button>
+                            <button class="btn btn-secondary btn-sm empathy-button" onclick="getEmpathyResponse('${entry.text}')">공감</button>
+                        `;
+                        resultContainer.appendChild(listItem);
+                    });
+                }
+            </script>
+
+        </div>
+
+        <!-- 달력 탭 -->
+        <div id="calendar-tab" class="tab-content" style="display: none;">
+            <h1>Monthly 감정 달력</h1>
+                <!-- 달력 영역 -->
+                <div id="emoji-calendar"></div>
+                <!-- 이모지 요약 및 차트 영역 -->
+                    <div id="emoji-summary" style="flex: 1; padding: 10px; background-color: #f9f9f9; border-radius: 8px;">
+                        <ul id="emoji-count-list" style="margin-bottom: 20px;"></ul>
+                        <div id="most-frequent-emoji" style="font-size: 18px; font-weight: bold; color: #444;"></div>
+                </div>
+                    <div class="fortune-card-container">
+                        <h2>행운 카드</h2>
+                        <div class="card-container">
+                            <!-- 행운 카드 1 -->
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-front">
+                                        <img src="./assests/every.png" alt="행운 카드 1" style="width: 200px;">
+                                    </div>
+                                    <div class="card-back">
+                                        <p class="fortune-text">당신의 노력은 곧 결실을 맺을 것입니다.<br> 모든 소원이 이루어질 거예요! 💫</p>
+                                        <a href="https://www.youtube.com/watch?v=beLbDtLbw_Y" target="_blank">
+                                            <button class="card-button">유튜브 링크로 가기</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 행운 카드 2 -->
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-front">
+                                        <img src="./assests/lucky.png" alt="행운 카드 2" style="width: 200px;">
+                                    </div>
+                                    <div class="card-back">
+                                        <p class="fortune-text">오늘은 좋은 일이 있을 것입니다.<br> 행복이 가득한 하루를 시작해요! 😊</p>
+                                        <a href="https://www.youtube.com/watch?v=ZHf0_gEUa84" target="_blank">
+                                            <button class="card-button">유튜브 링크로 가기</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 행운 카드 3 -->
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-front">
+                                        <img src="./assests/healthy.png" alt="행운 카드 3" style="width: 200px;">
+                                    </div>
+                                    <div class="card-back">
+                                        <p class="fortune-text">오늘은 좋은 기회가 찾아올 것입니다.<br>  튼튼하고 건강한 하루를 보내세요!💪</p>
+                                        <a href="https://www.youtube.com/watch?v=dfY7X7Sj-yQ" target="_blank">
+                                            <button class="card-button">유튜브 링크로 가기</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+
+    <!-- JavaScript 파일 불러오기 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- Bootstrap-datepicker JS 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/emoji.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
