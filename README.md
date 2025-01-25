@@ -21,11 +21,22 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
 
 ## 벤치마킹 사례
 
-### Apple Health
-Apple Health는 감정 추적 기능을 통해 사용자가 매일 자신의 감정을 기록하고, 그 감정 변화를 시각적으로 분석할 수 있도록 돕습니다. 이를 통해 사용자는 정신 건강을 관리할 수 있습니다.
+최근 **감정 기록**의 중요성이 크게 대두되고 있습니다. **애플**과 **유플러스**와 같은 대기업들도 **감정 일기장** 서비스를 선보이고 있으며, 이는 사용자가 **자기 감정을 이해하고 인식하는 데 도움을 주기 위해** 개발되었습니다. 감정을 기록하고 이를 공감받는 경험은 **심리적 안정과 자기 인식을 돕는 중요한 요소**로 작용하고 있습니다.
 
-### U+ 감정 일기
-U+ 감정 일기는 사용자가 하루 동안의 감정을 이모지로 표현하고, 피드백과 공감을 제공합니다. 이는 정서적 안정과 자기 인식을 돕는 중요한 요소로 작용합니다.
+1. **Apple Health**
+    
+    Apple Health는 **감정 추적 기능**을 통해 사용자가 매일 자신의 감정을 기록하고, 그 감정에 대한 변화를 시각적으로 분석할 수 있도록 돕고 있습니다. 이는 건강 관리와 감정 인식을 함께 지원하여 사용자의 **정신 건강**을 향상시키는 데 큰 도움이 됩니다.
+    
+    <div style="display: flex; gap: 10px; align-items: center;">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health1.png?raw=true" alt="Apple Health 1" width="45%" />
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health2.png?raw=true" alt="Apple Health 2" width="45%" />
+</div>
+
+2. **U+ 감정 일기**
+    
+    **U+ 감정 일기**는 사용자가 하루 동안의 감정을 이모지로 표현하고, 그 감정에 대해 **피드백과 공감**을 제공합니다. 이를 통해 사용자는 감정에 대해 인식하고, 공감을 얻는 과정을 경험하면서 **정서적 안정을 추구**할 수 있습니다.
+    
+    ![U+ 감정 일기](https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/U+%20%EA%B0%90%EC%A0%95%20%EC%9D%BC%EA%B8%B0.png?raw=true)
 
 ---
 
