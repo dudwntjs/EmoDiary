@@ -7,7 +7,9 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
 
 ## EmoDiary 주요 기능 간단 소개
 
-![메인 페이지](https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/mainpage.png?raw=true)
+<div align="center">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/mainpage.png?raw=true" alt="메인페이지" width="60%" />
+</div>
 
 - **감정 기록 및 공감 메시지**
   - 사용자는 자신의 감정을 기록할 수 있으며, 챗지피티가 자동으로 공감 메시지를 제공합니다.
@@ -25,16 +27,16 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
     
     Apple Health는 **감정 추적 기능**을 통해 사용자가 매일 자신의 감정을 기록하고, 그 감정에 대한 변화를 시각적으로 분석할 수 있도록 돕고 있습니다. 이는 건강 관리와 감정 인식을 함께 지원하여 사용자의 **정신 건강**을 향상시키는 데 큰 도움이 됩니다.
     
-    <div style="display: flex; gap: 10px; align-items: center;">
-    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health1.png?raw=true" alt="Apple Health 1" width="30%" />
-    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health2.png?raw=true" alt="Apple Health 2" width="30%" />
+    <div align="center">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health1.png?raw=true" alt="Apple Health 1" width="25%" />
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Apple%20Health2.png?raw=true" alt="Apple Health 2" width="25%" />
 </div>
 
 2. **U+ 감정 일기**
     
     **U+ 감정 일기**는 사용자가 하루 동안의 감정을 이모지로 표현하고, 그 감정에 대해 **피드백과 공감**을 제공합니다. 이를 통해 사용자는 감정에 대해 인식하고, 공감을 얻는 과정을 경험하면서 **정서적 안정을 추구**할 수 있습니다.
 
-    <div style="display: flex; gap: 10px; align-items: center;">
+    <div align="center">
     <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/U+%20%EA%B0%90%EC%A0%95%20%EC%9D%BC%EA%B8%B0.png?raw=true" alt="U+ 감정 일기" width="45%" />
 </div>
 
@@ -63,18 +65,27 @@ EmoDiary는 **감정을 공감해주는 일기장**으로, 사용자가 자신�
     - 사용자가 감정을 입력하고 일기를 작성한 후, **‘저장하기’ 버튼**을 클릭하여 작성한 일기를 저장합니다.
     - 저장된 일기는 목록에 자동으로 추가됩니다.
     - 이미 저장된 날짜에 일기를 저장하면 기존 내용을 수정할 수 있으며, 삭제도 가능합니다.
-
+      
+<div align="center">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Empathy.png?raw=true" alt="Empathy" width="50%" />
+</div>
 6. **저장된 일기 목록 및 공감**
     - 화면 하단에는 사용자가 저장한 **일기 목록**이 표시됩니다. 
     - 각 일기 항목은 날짜와 감정 이모지, 간단한 텍스트가 포함되어 있으며, **‘공감’ 버튼**을 통해 공감 메시지를 받을 수 있습니다.
     - 저장된 일기에서 **‘공감’ 버튼**을 클릭하면, 챗지피티가 자동으로 **공감 메시지**를 생성하여 사용자에게 전달합니다.
     - 공감 메시지 생성은 OpenAI GPT API와의 연동을 통해 이루어집니다.
 
+<div align="center">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Emoji%20Statistics.png?raw=true" alt="Emoji Statistics" width="50%" />
+</div>
 7. **달력과 이모지 통계**
     - **달력**에서는 사용자가 이번 달의 감정을 기록한 날짜와 선택된 감정 이모지를 확인할 수 있습니다.
     - 달력 위에 표시된 날짜를 클릭하면, 해당 날짜에 선택된 이모지가 보여지며 세부 내용을 확인할 수 있습니다.
     - 달력에 표시된 감정들은 오른쪽에 위치한 **이모지 총 개수**로 계산되어, 사용자가 한 달 동안 어떤 감정을 주로 느꼈는지 한눈에 볼 수 있습니다.
 
+<div align="center">
+    <img src="https://github.com/dudwntjs/EmoDiary/blob/main/assests/images/Fortune%20Cards.png?raw=true" alt="Fortune Cards" width="50%" />
+</div>
 8. **행운 카드**
     - 사용자는 랜덤으로 행운 카드를 뽑아 긍정적인 메시지와 함께 하루를 시작할 수 있습니다.
     - 각 카드는 호버 시 뒤집히면서 카드 내용이 표시됩니다.
